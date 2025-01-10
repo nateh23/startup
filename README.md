@@ -30,8 +30,8 @@ sequenceDiagram
     actor You
     actor Website
     You ->> Website:Submits User Input
-    Website ->> Website:Decides Snail Input
-    Website ->> Server:Evaluates Match
+    Website ->> Server:Sends User Input
+    Server ->> Server: Decide Snail Input
     actor Public Loser Chat
     Server ->> Public Loser Chat:If loss, display losing message to everyone
     Server ->> Server: If lose, store amount of wins user had before losing
@@ -53,12 +53,15 @@ sequenceDiagram
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
+- **HTML** - Overall structure of site, will contain three pages. One for signing in, one for the game page, one for leaderboard.
+- **CSS** - Styling of application that fits on different screen sizes, correct spacing, and good color choice.
+- **React** - Ability to login, display of the current match of rock paper sicssors, leaderboard display, and loser chat display.
+- **Service** - Backend service that will handle
+- - login
+- - receiving user input
+- - evaluates match of rock paper scissors
 - **DB/Login** - Description here
-- **WebSocket** - Description here
+- **WebSocket** - When a user loses against the snail, it will be displayed to all other users.
 
 ## 🚀 AWS deliverable
 
