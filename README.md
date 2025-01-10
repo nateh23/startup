@@ -8,10 +8,10 @@ I really wanted to play rock paper scissors but with a snail because I thought i
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] Proper use of Markdown
+- [x] Proper use of Markdown
 - [x] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
+- [x] Description of key features
+- [x] Description of how you will use each technology
 - [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
@@ -60,7 +60,7 @@ I am going to use the required technologies in the following ways.
   - login
   - receiving user input
   - evaluates match of rock paper scissors
-- **DB/Login** - Description here
+- **DB/Login** - Stores users credentials and high score in database. User cannot play against the snail without an account, to avoid errors in storing highscores for nonexistent users.
 - **WebSocket** - When a user loses against the snail, it will be displayed to all other users.
 
 ## 🚀 AWS deliverable
