@@ -57,9 +57,9 @@ I am going to use the required technologies in the following ways.
 - **CSS** - Styling of application that fits on different screen sizes, correct spacing, and good color choice.
 - **React** - Ability to login, display of the current match of rock paper sicssors, leaderboard display, and loser chat display.
 - **Service** - Backend service that will handle
-- - login
-- - receiving user input
-- - evaluates match of rock paper scissors
+  - login
+  - receiving user input
+  - evaluates match of rock paper scissors
 - **DB/Login** - Description here
 - **WebSocket** - When a user loses against the snail, it will be displayed to all other users.
 
