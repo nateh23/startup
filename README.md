@@ -12,7 +12,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] A concise and compelling elevator pitch
 - [ ] Description of key features
 - [ ] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
@@ -22,13 +22,22 @@ The year is 2025, and you have been selected to help test the brand new product 
 
 ![Design image](SnailSite.jpg)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Below is a diagram explaining how the main function of the website being the rock paper scissors game will be handled.
+Read diagram from top to bottom.
 
 ```mermaid
 sequenceDiagram
     actor You
     actor Website
-    You->>Website: Replace this with your design
+    You ->> Website:Submits User Input
+    Website ->> Website:Decides Snail Input
+    Website ->> Server:Evaluates Match
+    actor Public Loser Chat
+    Server ->> Public Loser Chat:If loss, display losing message to everyone
+    Server ->> Server: If lose, store amount of wins user had before losing
+    Server ->> Website:Gives Evaluation
+    Website ->> You:Displays Result
+    You ->> You: If win, begin cycle again
 ```
 
 ### Key features
