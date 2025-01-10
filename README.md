@@ -6,9 +6,6 @@ I really wanted to play rock paper scissors but with a snail because I thought i
 
 ## 🚀 Specification Deliverable
 
-> [!NOTE]
->  Fill in this sections as the submission artifact for this deliverable. You can refer to this [example](https://github.com/webprogramming260/startup-example/blob/main/README.md) for inspiration.
-
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [ ] Proper use of Markdown
@@ -28,6 +25,11 @@ The year is 2025, and you have been selected to help test the brand new product 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ```mermaid
+config:
+  layout: elk
+  look: handDrawn
+  theme: dark
+
 sequenceDiagram
     actor You
     actor Website
@@ -36,9 +38,12 @@ sequenceDiagram
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Leaderboard of how many games people have won against the snail.
+- Messaging system that lets you know when your friends have lost to the snail so you can make fun of them.
+- User can choose between Rock Paper or Scissors.
+- Snail that randomly chooses between Rock Paper or Scissors.
+- Visual system for indicating what choice has been made by Snail and User.
+- Secure Account creation and Login capabilities.
 
 ### Technologies
 
