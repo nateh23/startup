@@ -2,31 +2,62 @@
 <html lang="eng">
     <head>
         <title>RockPaperSnail</title>
-        
+        <link rel = "icon" href= "siteIcon.png">
     </head>
 
     <body>
         <header>
+            <h1>Rock Paper Snail</h1>
+            <hr>
+            <span class = "playerName">Username</span>
             <nav>
                 <menu>
                     <li>
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="play.html">Play</a>
-                    </li>
-                    <li>
                         <a href = "leaderboard.html">Leaderboard</a>
                     </li>
                 </menu>
             </nav>
+            <hr>
         </header>
 
         <main>
+            <div class = "updateBox">
+                <li class = "losingPlayer">John lost to the snail</li>
+                <li class = "losingPlayer">Bobby lost to the snail</li>
+                <li class = "losingPlayer">Maurice lost to the snail</li>
+            </div>
 
+            <div class = "currentScore">
+                <label>Current Score: </label>
+                <input type = "text" id = "count" value = "0" readonly>
+            </div>
+
+            <div class = "game">
+                <div>
+                    <img alt = "test" src = "basicRender.png"/>
+                    <br>
+                    <label class = "response">Snail used ____</label>
+                </div>
+
+                <table>
+                    <td>
+                        <button><img alt = "rock" src = "rock.png"></button>
+                    </td>
+                    <td>
+                        <button><img alt = "paper" src = "paper.png"></button>
+                    </td>
+                    <td>
+                        <button><img alt = "scissors" src = "scissors.png"></button>
+                    </td>
+                </table>
+            </div>
         </main>
 
         <footer>
+            <hr>
             <a href="https://github.com/nateh23/startup">GitHub</a>
         </footer>
     </body>
