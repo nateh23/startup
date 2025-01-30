@@ -1,17 +1,45 @@
-header {
+header { 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    border-bottom: 100px;
+    justify-content: flex-start;
 }
 
-/* .currentScore {
-    position: fixed;
-    right: 0;
-} */
+a {
+    text-decoration: none;
+}
+
+main {
+    flex: calc(100vh - 150px);
+}
 
 .gameInfo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.updateBox {
+    background-color: aliceblue;
+    padding: 20px;
+    padding-left: 10px; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    list-style: none;
+}
+
+.currentScore {
+    display: flex;
+    padding: 20px;
+    padding-top: 0px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.losingPlayer {
+    opacity: 0.5;
 }
 
 .game {
@@ -20,7 +48,38 @@ header {
     align-items: center;
 }
 
+.fancyBox{
+    background: none;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 10px;
+}
+
 .img-button {
     background: none;
     border: none;
+}
+
+.snailResponse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-height: 600px) {
+    header {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    main {
+        flex: 1 100vh;
+    }
+}
+
+@media (max-height: 400px) {
+    .gameInfo{
+        display: none;
+    }
 }

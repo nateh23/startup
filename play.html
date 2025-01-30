@@ -17,15 +17,17 @@
 
     <body>
         <header>
-            <h1 class = "fancyTitle">Rock Paper Snail</h1>
-            <span class = "playerName">Username</span>
-            <nav class = "navbar fixed-top">
-                <menu>
+            <div>
+                <h1 class = "fancyTitle">Rock Paper Snail</h1>
+                <span class = "playerName text-muted">Username</span>
+            </div>
+            <nav class = "navbar">
+                <menu class = "container-fluid">
                     <li class = "nav-item">
-                        <a href="index.html">Home</a>
+                        <a class = "nav-link text-muted" href="index.html">Home</a>
                     </li>
                     <li class = "nav-item">
-                        <a href = "leaderboard.html">Leaderboard</a>
+                        <a class = "nav-link text-muted" href = "leaderboard.html">Leaderboard</a>
                     </li>
                 </menu>
             </nav>
@@ -41,35 +43,33 @@
                 </div>
     
                 <div class = "currentScore">
-                    <label>Current Score: </label>
-                    <input type = "text" id = "count" value = "0" readonly>
+                    <label class = "text-muted">Current Score</label>
+                    <input class = "input-group mb-3 inputRight fancyBox text-muted" type = "text" id = "count" value = "0" readonly>
                 </div>
             </div>
 
             <div class = "game">
-                <div>
-                    <img alt = "test" src = "basicRender.png"/>
-                    <br>
-                    <label class = "response">Snail used ____</label>
+                <div class = "snailResponse">
+                    <img class = "mainGraphic" alt = "test" src = "basicRender.png"/>
+                    <i class = "response">Snail used ____</i>
                 </div>
 
                 <table>
                     <td>
-                        <button class = "img-button"><img alt = "rock" src = "rock.png"></button>
+                        <button class = "img-button option"><img alt = "rock" src = "rock.png"></button>
                     </td>
                     <td>
-                        <button class = "img-button"><img alt = "paper" src = "paper.png"></button>
+                        <button class = "img-button option"><img alt = "paper" src = "paper.png"></button>
                     </td>
                     <td>
-                        <button class = "img-button"><img alt = "scissors" src = "scissors.png"></button>
+                        <button class = "img-button option"><img alt = "scissors" src = "scissors.png"></button>
                     </td>
                 </table>
             </div>
         </main>
 
         <footer>
-            <hr>
-            <a href="https://github.com/nateh23/startup">GitHub</a>
+            <a class = "fancyTitle text-reset fixed-bottom" href="https://github.com/nateh23/startup">GitHub</a>
         </footer>
     </body>
 </html>
