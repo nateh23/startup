@@ -3,19 +3,28 @@
     <head>
         <title>RockPaperSnail</title>
         <link rel = "icon" href= "siteIcon.png">
+
+        <link rel="stylesheet" href="default.css" />
+        <link rel="stylesheet" href="play.css" />
+        <!-- bootstrap -->
+        <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+        />
     </head>
 
     <body>
         <header>
-            <h1>Rock Paper Snail</h1>
-            <hr>
+            <h1 class = "fancyTitle">Rock Paper Snail</h1>
             <span class = "playerName">Username</span>
-            <nav>
+            <nav class = "navbar fixed-top">
                 <menu>
-                    <li>
+                    <li class = "nav-item">
                         <a href="index.html">Home</a>
                     </li>
-                    <li>
+                    <li class = "nav-item">
                         <a href = "leaderboard.html">Leaderboard</a>
                     </li>
                 </menu>
@@ -24,15 +33,17 @@
         </header>
 
         <main>
-            <div class = "updateBox">
-                <li class = "losingPlayer">John lost to the snail</li>
-                <li class = "losingPlayer">Bobby lost to the snail</li>
-                <li class = "losingPlayer">Maurice lost to the snail</li>
-            </div>
-
-            <div class = "currentScore">
-                <label>Current Score: </label>
-                <input type = "text" id = "count" value = "0" readonly>
+            <div class = "gameInfo">
+                <div class = "updateBox">
+                    <li class = "losingPlayer">John lost to the snail</li>
+                    <li class = "losingPlayer">Bobby lost to the snail</li>
+                    <li class = "losingPlayer">Maurice lost to the snail</li>
+                </div>
+    
+                <div class = "currentScore">
+                    <label>Current Score: </label>
+                    <input type = "text" id = "count" value = "0" readonly>
+                </div>
             </div>
 
             <div class = "game">
@@ -44,13 +55,13 @@
 
                 <table>
                     <td>
-                        <button><img alt = "rock" src = "rock.png"></button>
+                        <button class = "img-button"><img alt = "rock" src = "rock.png"></button>
                     </td>
                     <td>
-                        <button><img alt = "paper" src = "paper.png"></button>
+                        <button class = "img-button"><img alt = "paper" src = "paper.png"></button>
                     </td>
                     <td>
-                        <button><img alt = "scissors" src = "scissors.png"></button>
+                        <button class = "img-button"><img alt = "scissors" src = "scissors.png"></button>
                     </td>
                 </table>
             </div>
