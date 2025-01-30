@@ -20,3 +20,6 @@ Okay this was on the checkbox of things to do I usually take notes in different 
 - structured my pages right
 - added some images for the game
 - I'm assuming textual content just means like text where needed?
+
+## CSS stuff
+i'd say big thing to remember is multiple classes can be thrown in one tag I want to learn more about inheritance of classes too through the page
