@@ -73,26 +73,26 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **HTML pages** - I did not complete this part of the deliverable.
-- [x] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [x] **Links** - I did not complete this part of the deliverable.
-- [x] **Text** - I did not complete this part of the deliverable.
-- [x] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [x] **Images** - I did not complete this part of the deliverable.
-- [x] **Login placeholder** - I did not complete this part of the deliverable.
-- [x] **DB data placeholder** - I did not complete this part of the deliverable.
-- [x] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - Added 3 pages for the website to navigate.
+- [x] **Proper HTML element usage** - Everything is nice and organized!
+- [x] **Links** - Links allow you to navigate between parts of the site. Github link is there too.
+- [x] **Text** - Placeholder texts exists for the site as well as titles among other things.
+- [x] **3rd party API placeholder** - Okay so I want to use colormind for this so not much of a change yet.
+- [x] **Images** - There are images for the snail and rock papers scissors.
+- [x] **Login placeholder** - Placeholder for login exists.
+- [x] **DB data placeholder** - Leaderboard page.
+- [x] **WebSocket placeholder** - The snail loser chat is in place.
 
 ## 🚀 CSS deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **Header, footer, and main content body** - I did not complete this part of the deliverable.
-- [x] **Navigation elements** - I did not complete this part of the deliverable.
-- [x] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [x] **Application elements** - I did not complete this part of the deliverable.
-- [x] **Application text content** - I did not complete this part of the deliverable.
-- [x] **Application images** - I did not complete this part of the deliverable.
+- [x] **Header, footer, and main content body** - I've got everything organized into a header footer and main. Visually I didn't add like distinct bars since I'm going for a different kind of look.
+- [x] **Navigation elements** - I've got a navigation bar at the top of the play and leaderboard page.
+- [x] **Responsive to window resizing** - Everything scales according to the screen and I hide some elements if it's too small.
+- [x] **Application elements** - I'm guessing this means like my leaderboard, loser chat, etc? If so all of that has been formated to how I want it.
+- [x] **Application text content** - I learned how to add a nice shadow behind text so a lot of my site uses white text with a black gradient behind it to make it pop out so that's neat..
+- [x] **Application images** - The snail, rock, paper, scissors images are all in place and scale correctly.
 
 ## 🚀 React part 1: Routing deliverable
 
