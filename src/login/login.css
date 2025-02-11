@@ -3,14 +3,6 @@ body {
     flex-direction: column;
 }
 
-header {
-    flex: 0 80px;
-    font-size: 3em;
-    background-color: #dfebf4;
-    display: flex;
-    justify-content: center;
-}
-
 img {
     width: 30vh;
     height: auto;

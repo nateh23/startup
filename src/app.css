@@ -12,12 +12,6 @@ header {
     background-color: #dfebf4;
 }
 
-.option {
-    width: 10%vh;
-    height: auto;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
-}
-
 .mainGraphic {
     width: 40vh;
     height: auto;
@@ -30,6 +24,7 @@ main {
 
 footer {
     background-color: #c5e9ef;
+    height: 10vh;
     flex: 0 50px;
 }
 
