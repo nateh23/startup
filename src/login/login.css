@@ -3,23 +3,13 @@ body {
     flex-direction: column;
 }
 
-img {
+.loginVisual {
     width: 30vh;
     height: auto;
 }
 
 form {
     width: 250px;
-}
-
-main {
-    flex: calc(100vh - 130px);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-image: linear-gradient(to bottom, #dfebf4, #c5e9ef);
-    background-color: #f4e9df;
 }
 
 footer {
@@ -30,16 +20,4 @@ footer {
 .pedastle {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
-}
-
-@media (max-height: 600px) {
-    header {
-        display: none;
-    }
-    footer {
-        display: none;
-    }
-    main {
-        flex: 1 100vh;
-    }
 }

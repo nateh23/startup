@@ -6,7 +6,7 @@ export function Login() {
     return (
         <main>
             <div>
-                <img className="pedastle" alt="test" src="./basicRender.png" />
+                <img className="pedastle loginVisual" alt="test" src="./basicRender.png" />
             </div>
 
             <div className="text-center">

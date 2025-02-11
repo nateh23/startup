@@ -18,8 +18,14 @@ header {
 }
 
 main {
+    flex: calc(100vh - 130px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     background-image: linear-gradient(to bottom, #dfebf4, #c5e9ef);
     background-color: #f4e9df;
+    width: 100%
 }
 
 footer {
@@ -60,4 +66,16 @@ i {
 .navbar {
     margin-left: 20px;
     width: 200px;
+}
+
+@media (max-height: 600px) {
+    header {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    main {
+        flex: 1 100vh;
+    }
 }

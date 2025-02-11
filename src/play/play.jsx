@@ -5,7 +5,7 @@ import './play.css';
 export function Play() {
     return (
         <main>
-            <div className="gameInfo">
+            <div className="gameInfo flexContainer">
                 <div className="updateBox">
                     <ul>
                         <li className="losingPlayer">John lost to the snail</li>
