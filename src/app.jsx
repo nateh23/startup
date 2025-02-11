@@ -41,7 +41,7 @@ export default function App() {
             </main>
             
             <footer>
-                <a className="fancyTitle text-reset fixed-bottom" href="https://github.com/nateh23/startup">GitHub</a>
+                <a className="fancyTitle text-reset fixed-bottom" href="https://github.com/nateh23/startup">Nathan Henderson GitHub</a>
             </footer>
         </BrowserRouter>
     );

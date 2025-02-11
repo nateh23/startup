@@ -23,3 +23,6 @@ Okay this was on the checkbox of things to do I usually take notes in different 
 
 ## CSS stuff
 i'd say big thing to remember is multiple classes can be thrown in one tag I want to learn more about inheritance of classes too through the page
+
+## React
+Luckily I messed up a lot so I got a lot of practice in this one, biggest thing is just remembering all css files get accessed and argue with each other, and also that I need to give .sh proper permissions to run. ALSO the cmd for deploying is super long haha gotta remember how it works
