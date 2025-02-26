@@ -4,7 +4,7 @@ class EventMessage {
     }
 }
 
-class NotifHandler {
+export class NotifHandler {
     constructor() {}
 
     receiveNotif = function(){
@@ -12,6 +12,6 @@ class NotifHandler {
     }
 
     sendNotif = function(){
-        
+
     }
 }
