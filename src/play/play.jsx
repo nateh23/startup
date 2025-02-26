@@ -1,8 +1,33 @@
 import React from 'react';
 
 import './play.css';
+import { Button } from 'react-bootstrap';
 
 export function Play() {
+    const [userChoice,changeUserChoice] = React.useState("no choice")
+    const [snailChoice,changeSnailChoice] = React.useState("no choice")
+    const [snailResponseVisual,changeSnailDisplay] = React.useState("A Snail Approaches")
+    const [currentWins,changeWins] = React.useState(0)
+
+    async function snailDecide(){
+
+    }
+
+    async function addWin() {
+        console.log("ay")
+        changeWins(currentWins + 1)
+        localStorage.setItem("wins",currentWins)
+    }
+
+    async function resetWins(){
+        localStorage.setItem("wins",0)
+        changeWins(localStorage.getItem("wins"))
+    }
+
+    async function evalWin(){
+
+    }
+
     return (
         <main>
             <div className="gameInfo flexContainer">
@@ -23,7 +48,7 @@ export function Play() {
             <div className="game">
                 <div className="snailResponse">
                     <img className="mainGraphic" alt="test" src="./basicRender.png"/>
-                    <i className="response">Snail used ____</i>
+                    <i className="response">{snailResponseVisual}</i>
                 </div>
 
                 <table>
