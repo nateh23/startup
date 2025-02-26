@@ -1,13 +1,12 @@
 import React from 'react';
 
 import './play.css';
-import { Button } from 'react-bootstrap';
+import {Snail} from './snail.js'
 
 export function Play() {
     const [userChoice,changeUserChoice] = React.useState("no choice")
     const [snailChoice,changeSnailChoice] = React.useState("no choice")
     const [snailResponseVisual,changeSnailDisplay] = React.useState("A Snail Approaches")
-    const [currentWins,changeWins] = React.useState(0);
 
     const weaknessLib = {
         "rock": "paper",
@@ -15,21 +14,17 @@ export function Play() {
         "scissors": "rock"
     };
 
-    function snailDecide(){
-        const choices = ["rock", "paper", "scissors"];
-        const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-        changeSnailChoice(randomChoice);
-        console.log(snailChoice)
+    function getCurrentWins() {
+        return localStorage.getItem("wins") || 0
     }
 
     function addWin() {
-        changeWins(currentWins + 1)
+        changeWins(getCurrentWins() + 1)
         localStorage.setItem("wins",currentWins)
     }
 
     function resetWins(){
         localStorage.setItem("wins",0)
-        changeWins(localStorage.getItem("wins"))
     }
 
     function evalWin(){
@@ -46,7 +41,7 @@ export function Play() {
 
     function runRound(input){
         changeUserChoice(input)
-        snailDecide()
+        changeSnailChoice(Snail.makeChoice())
         evalWin()
     }
 
