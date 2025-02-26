@@ -9,7 +9,6 @@ import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
-    const [userName,setUser] = React.useState
     return (
         <BrowserRouter>
             <header>

@@ -17,6 +17,18 @@ export function Unauthenticated(){
     }
 
     return(<>
-        
+        <div className="text-center">
+                <form method="get" action="play.html">
+                    <div>
+                        <input className='form-control' type='text' value={userName} onChange={(e) => setUserName(e.target.value)} placeholder='your@email.com' />
+                    </div>
+                    <div>
+                        <input className='form-control' type='password' onChange={(e) => setPassword(e.target.value)} placeholder='password' />
+                    </div>
+
+                    <Button variant = "primary" onClick = {() => loginUser()} disabled={!userName || !password}>Sign In</Button>
+                    <Button variant = "primary" onClick = {() => createUser()} disabled={!userName || !password}>New Account</Button>
+                </form>
+        </div>
     </>)
 }
