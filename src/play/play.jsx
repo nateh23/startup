@@ -7,25 +7,47 @@ export function Play() {
     const [userChoice,changeUserChoice] = React.useState("no choice")
     const [snailChoice,changeSnailChoice] = React.useState("no choice")
     const [snailResponseVisual,changeSnailDisplay] = React.useState("A Snail Approaches")
-    const [currentWins,changeWins] = React.useState(0)
+    const [currentWins,changeWins] = React.useState(0);
 
-    async function snailDecide(){
+    const weaknessLib = {
+        "rock": "paper",
+        "paper": "scissors",
+        "scissors": "rock"
+    };
 
+    function snailDecide(){
+        const choices = ["rock", "paper", "scissors"];
+        const randomChoice = choices[Math.floor(Math.random() * choices.length)];
+        changeSnailChoice(randomChoice);
+        console.log(snailChoice)
     }
 
-    async function addWin() {
-        console.log("ay")
+    function addWin() {
         changeWins(currentWins + 1)
         localStorage.setItem("wins",currentWins)
     }
 
-    async function resetWins(){
+    function resetWins(){
         localStorage.setItem("wins",0)
         changeWins(localStorage.getItem("wins"))
     }
 
-    async function evalWin(){
+    function evalWin(){
+        if (snailChoice == weaknessLib[userChoice]){
+            addWin()
+            changeSnailDisplay("Snail used " + snailChoice + " and got cooked")
+        }else if(snailChoice == userChoice){
+            changeSnailDisplay("You both used " + snailChoice + " and got confused")
+        }else{
+            changeSnailDisplay("Snail wrecked you with " + snailChoice)
+            resetWins()
+        }
+    }
 
+    function runRound(input){
+        changeUserChoice(input)
+        snailDecide()
+        evalWin()
     }
 
     return (
@@ -55,13 +77,13 @@ export function Play() {
                     <tbody>
                         <tr>
                             <td>
-                                <button className="img-button option"><img alt="rock" src="./rock.png"/></button>
+                                <button className="img-button option" onClick={() => runRound("rock")}><img alt="rock" src="./rock.png"/></button>
                             </td>
                             <td>
-                                <button className="img-button option"><img alt="paper" src="./paper.png"/></button>
+                                <button className="img-button option" onClick={() => runRound("paper")}><img alt="paper" src="./paper.png"/></button>
                             </td>
                             <td>
-                                <button className="img-button option"><img alt="scissors" src="./scissors.png"/></button>
+                                <button className="img-button option" onClick={() => runRound("scissors")}><img alt="scissors" src="./scissors.png"/></button>
                             </td>
                         </tr>
                     </tbody>
