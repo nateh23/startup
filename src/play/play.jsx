@@ -7,6 +7,7 @@ export function Play() {
     const [userChoice,changeUserChoice] = React.useState("no choice")
     const [snailChoice,changeSnailChoice] = React.useState("no choice")
     const [snailResponseVisual,changeSnailDisplay] = React.useState("A Snail Approaches")
+    const [winVisual,changeWins] = React.useState(0)
 
     const weaknessLib = {
         "rock": "paper",
@@ -15,16 +16,17 @@ export function Play() {
     };
 
     function getCurrentWins() {
-        return localStorage.getItem("wins") || 0
+        return parseInt(localStorage.getItem("wins")) || 0
     }
 
     function addWin() {
-        changeWins(getCurrentWins() + 1)
-        localStorage.setItem("wins",currentWins)
+        localStorage.setItem("wins",getCurrentWins() + 1)
+        changeWins(getCurrentWins())
     }
 
     function resetWins(){
         localStorage.setItem("wins",0)
+        changeWins(getCurrentWins())
     }
 
     function evalWin(){
@@ -58,7 +60,7 @@ export function Play() {
     
                 <div className="currentScore">
                     <label className="text-muted">Current Score</label>
-                    <input className="input-group mb-3 inputRight fancyBox text-muted" type="text" id="count" value="0" readOnly />
+                    <input className="input-group mb-3 inputRight fancyBox text-muted" type="text" id="count" value={winVisual} readOnly />
                 </div>
             </div>
 

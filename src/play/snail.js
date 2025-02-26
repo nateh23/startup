@@ -1,4 +1,4 @@
-class Snail {
+export class Snail {
     options = ["rock","paper","scissors"]
 
     constructor(){
