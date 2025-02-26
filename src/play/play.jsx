@@ -3,11 +3,14 @@ import React from 'react';
 import './play.css';
 import {Snail} from './snail.js'
 
+import {Loserboard} from './loserboard.jsx'
+
 export function Play() {
     const [userChoice,changeUserChoice] = React.useState("no choice")
     const [snailChoice,changeSnailChoice] = React.useState("no choice")
     const [snailResponseVisual,changeSnailDisplay] = React.useState("A Snail Approaches")
     const [winVisual,changeWins] = React.useState(0)
+    const opp = new Snail
 
     const weaknessLib = {
         "rock": "paper",
@@ -43,20 +46,14 @@ export function Play() {
 
     function runRound(input){
         changeUserChoice(input)
-        changeSnailChoice(Snail.makeChoice())
+        changeSnailChoice(opp.makeChoice())
         evalWin()
     }
 
     return (
         <main>
             <div className="gameInfo flexContainer">
-                <div className="updateBox">
-                    <ul>
-                        <li className="losingPlayer">John lost to the snail</li>
-                        <li className="losingPlayer">Bobby lost to the snail</li>
-                        <li className="losingPlayer">Maurice lost to the snail</li>
-                    </ul>
-                </div>
+                <Loserboard></Loserboard>
     
                 <div className="currentScore">
                     <label className="text-muted">Current Score</label>
