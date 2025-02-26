@@ -10,11 +10,19 @@ export function Login({userName, authState, onAuthChange}) {
             <div>
                 <img className="pedastle loginVisual" alt="test" src="./basicRender.png" />
             </div>
-            
-            <Unauthenticated></Unauthenticated>
-            {/* {authState == AuthState.Unauthenticated && (
-                <Unauthenticated></Unauthenticated>//might
-            )} */}
+
+            {authState == AuthState.Authenticated && (
+                <>welcome smile</>
+            )}
+
+            {authState == AuthState.Unauthenticated && (
+                <Unauthenticated
+                    userName={userName}
+                    onLogin={(loginUserName) => {
+                        onAuthChange(loginUserName, AuthState.Authenticated);
+                    }}
+                ></Unauthenticated>//might
+            )}
 
             <div>
                 <i>&quot;Monkey see but Snail do&quot; ~Ghandi</i>

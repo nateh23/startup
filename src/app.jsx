@@ -5,10 +5,16 @@ import { Login } from './login/login';
 import { Play } from './play/play';
 import { Leaderboard } from './leaderboard/leaderboard';
 
+import { AuthState } from './login/AuthState';
+
 import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
+    const [userName,changeUserName] = React.useState(localStorage.getItem("userName") || "")
+    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+    const [authState, setAuthState] = React.useState(currentAuthState);
+
     return (
         <BrowserRouter>
             <header>
@@ -32,7 +38,14 @@ export default function App() {
             
             <main>
                 <Routes>
-                    <Route path='/' element={<Login />} exact />
+                    <Route path='/' element={<Login
+                        userName={userName}
+                        authState={authState}
+                        onAuthChange={(userName, authState) => {
+                        setAuthState(authState);
+                        changeUserName(userName);
+                        }}
+                    />} exact />
                     <Route path='/play' element={<Play />} />
                     <Route path='/leaderboard' element={<Leaderboard />} />
                     <Route path='*' element={<NotFound />} />
