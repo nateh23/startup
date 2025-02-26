@@ -2,7 +2,7 @@ import React from 'react';
 
 import './login.css';
 
-export function Login() {
+export function Login({userName, authState, onAuthChange}) {
     return (
         <main>
             <div>

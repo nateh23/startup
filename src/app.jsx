@@ -7,9 +7,9 @@ import { Leaderboard } from './leaderboard/leaderboard';
 
 import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Nav } from 'react-bootstrap';
 
 export default function App() {
+    const [userName,setUser] = React.useState
     return (
         <BrowserRouter>
             <header>
