@@ -20,16 +20,20 @@ export default function App() {
             <header>
                 <div>
                     <h1 className="fancyTitle">Rock Paper Snail</h1>
-                    <span className="playerName text-muted">Username</span>
+                    <span className="playerName text-muted">{userName}</span>
                 </div>
                 <nav className="navbar">
                     <menu className="container-fluid">
                         <li className="nav-item">
-                            <NavLink className="nav-link text-muted" to="play">Play</NavLink>
+                            {authState == AuthState.Authenticated && (
+                                <NavLink className="nav-link text-muted" to="play">Play</NavLink>
+                            )}
                         </li>
 
                         <li className="nav-item">
-                            <NavLink className="nav-link text-muted" to="leaderboard">Leaderboard</NavLink>
+                            {authState == AuthState.Authenticated && (
+                                <NavLink className="nav-link text-muted" to="leaderboard">Leaderboard</NavLink>
+                            )}
                         </li>
                     </menu>
                 </nav>
