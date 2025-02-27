@@ -4,8 +4,9 @@ import './play.css';
 import {Snail} from './snail.js'
 
 import {Loserboard} from './loserboard.jsx'
+import { notifHandler } from "./notif.js";
 
-export function Play() {
+export function Play(params) {
     const [userChoice,changeUserChoice] = React.useState("no choice")
     const [snailChoice,changeSnailChoice] = React.useState("no choice")
     const [snailResponseVisual,changeSnailDisplay] = React.useState("A Snail Approaches")
@@ -40,6 +41,7 @@ export function Play() {
             changeSnailDisplay("You both used " + snailChoice + " and got confused")
         }else{
             changeSnailDisplay("Snail wrecked you with " + snailChoice)
+            notifHandler.receiveLoser(params.userName)
             resetWins()
         }
     }

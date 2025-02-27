@@ -1,8 +1,7 @@
 import React from 'react';
 
 import './play.css';
-import { NotifHandler } from "./notif.js";
-const notifHandler = new NotifHandler();
+import { notifHandler } from "./notif.js";
 
 export function Loserboard() {
     const [currentLosers, setLosers] = React.useState([]);

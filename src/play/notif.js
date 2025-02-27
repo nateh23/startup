@@ -6,9 +6,8 @@ class EventMessage {
 
 const BOARD_LENGTH = 5
 //i see in simon its built to have multiple handlers but..... why?
-export class NotifHandler {
+class NotifHandler {
     constructor() {
-        console.log("STARTING")
         this.losers = [];
         this.listeners = [];
         let counter = 0
@@ -39,3 +38,6 @@ export class NotifHandler {
         console.log(this.losers);
     }
 }
+
+const notifHandler = new NotifHandler
+export {notifHandler}
