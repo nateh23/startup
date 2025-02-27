@@ -25,6 +25,9 @@ export default function App() {
                 <nav className="navbar">
                     <menu className="container-fluid">
                         <li className="nav-item">
+                            <NavLink className="nav-link text-muted" to="">Login</NavLink>
+                        </li>
+                        <li className="nav-item">
                             {authState == AuthState.Authenticated && (
                                 <NavLink className="nav-link text-muted" to="play">Play</NavLink>
                             )}

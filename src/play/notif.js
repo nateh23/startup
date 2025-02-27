@@ -22,10 +22,12 @@ class NotifHandler {
     }
 
     receiveLoser(newLoser){
-        this.losers.push(newLoser)
-        this.trimLoserBoard()
-        // this.debugLosers()
-        this.handler(this.losers)
+        if (this.handler){
+            this.losers.push(newLoser)
+            this.trimLoserBoard()
+            // this.debugLosers()
+            this.handler(this.losers)
+        }
     }
 
     trimLoserBoard(){

@@ -2,6 +2,7 @@ import React from 'react';
 
 import './login.css';
 import { Unauthenticated } from './unauthenticated';
+import { Authenticated } from './authenticated';
 import { AuthState } from './AuthState';
 
 export function Login({userName, authState, onAuthChange}) {
@@ -12,7 +13,12 @@ export function Login({userName, authState, onAuthChange}) {
             </div>
 
             {authState == AuthState.Authenticated && (
-                <>welcome smile</>
+                <Authenticated
+                    userName = {userName}
+                    onLogout = {() => {
+                        onAuthChange("",AuthState.Unauthenticated)
+                    }}
+                ></Authenticated>
             )}
 
             {authState == AuthState.Unauthenticated && (
