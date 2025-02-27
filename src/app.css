@@ -1,3 +1,9 @@
+:root {
+    --background-color: #ffffff;
+    --topColor: #dfebf4;
+    --bottomColor: #c5e9ef;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -23,8 +29,8 @@ main {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-image: linear-gradient(to bottom, #dfebf4, #c5e9ef);
-    background-color: #f4e9df;
+    background-image: linear-gradient(to bottom, var(--topColor), var(--bottomColor));
+    background-color: var(--background-color);
     width: 100%
 }
 

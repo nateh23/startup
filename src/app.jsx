@@ -15,6 +15,12 @@ export default function App() {
     const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
     const [authState, setAuthState] = React.useState(currentAuthState);
 
+    React.useEffect(() => { 
+        //placeholder code for colormind
+        document.documentElement.style.setProperty('--topColor', "#ffffff");
+        document.documentElement.style.setProperty('--bottomColor', "#ffffff");
+    }, []);
+
     return (
         <BrowserRouter>
             <header>
