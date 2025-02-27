@@ -106,8 +106,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [x] **All functionality implemented or mocked out** - Got the stuff mocked out for the little loser box the leaderboard playing rock paper scissors the whole nine yards.
+- [x] **Hooks** -We are now ready for a new color to be decided whenever colormind is used just need to add it later
 
 ## 🚀 Service deliverable
 

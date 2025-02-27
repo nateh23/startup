@@ -26,3 +26,6 @@ i'd say big thing to remember is multiple classes can be thrown in one tag I wan
 
 ## React
 Luckily I messed up a lot so I got a lot of practice in this one, biggest thing is just remembering all css files get accessed and argue with each other, and also that I need to give .sh proper permissions to run. ALSO the cmd for deploying is super long haha gotta remember how it works
+
+## React 2.0
+dude this was a LOT basically dont forget your colormind setup in app.jsx and stuff!
