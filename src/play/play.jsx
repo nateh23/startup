@@ -7,8 +7,6 @@ import {Loserboard} from './loserboard.jsx'
 import { notifHandler } from "./notif.js";
 
 export function Play(params) {
-    const [userChoice,changeUserChoice] = React.useState("no choice")
-    const [snailChoice,changeSnailChoice] = React.useState("no choice")
     const [snailResponseVisual,changeSnailDisplay] = React.useState("A Snail Approaches")
     const [winVisual,changeWins] = React.useState(0)
     const opp = new Snail
@@ -33,7 +31,7 @@ export function Play(params) {
         changeWins(getCurrentWins())
     }
 
-    function evalWin(){
+    function evalWin(userChoice,snailChoice){
         if (snailChoice == weaknessLib[userChoice]){
             addWin()
             changeSnailDisplay("Snail used " + snailChoice + " and got cooked")
@@ -47,9 +45,8 @@ export function Play(params) {
     }
 
     function runRound(input){
-        changeUserChoice(input)
-        changeSnailChoice(opp.makeChoice())
-        evalWin()
+        const snailChoice = opp.makeChoice()
+        evalWin(input,snailChoice)
     }
 
     return (
