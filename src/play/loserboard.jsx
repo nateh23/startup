@@ -1,23 +1,35 @@
 import React from 'react';
 
 import './play.css';
-import {NotifHandler} from "./notif.js"
+import { NotifHandler } from "./notif.js";
+const notifHandler = new NotifHandler();
 
 export function Loserboard() {
-    React.useEffect(() => {
-        console.log("what")
-    },[])
+    const [currentLosers, setLosers] = React.useState([]);
 
-    const losers = ["John", "Bobby", "Maurice"];
-    const test = losers.map((loser, index) => (
-        <li key={index} className="losingPlayer">{loser} lost to the snail</li>
-    ));
+    React.useEffect(() => {
+        notifHandler.startWithHandlerFunc(updateHandler);
+    }, []);
+
+    function updateHandler(losers) {
+        const newLosers = [...currentLosers, ...losers]
+        setLosers(newLosers);
+    }
+
+    function generateLoserList() {
+        console.log("I GOT CALLED")
+        const compiled = currentLosers.map((loser, index) => (
+            <li key={index} className="losingPlayer">{loser} lost to the snail</li>
+        ));
+
+        return compiled;
+    }
 
     return (
         <div className="updateBox">
             <ul>
-                {test}
+                {generateLoserList()}
             </ul>
         </div>
-    )
+    );
 }
