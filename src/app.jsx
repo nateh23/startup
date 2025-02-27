@@ -17,8 +17,8 @@ export default function App() {
 
     React.useEffect(() => { 
         //placeholder code for colormind
-        document.documentElement.style.setProperty('--topColor', "#ffffff");
-        document.documentElement.style.setProperty('--bottomColor', "#ffffff");
+        document.documentElement.style.setProperty('--topColor', "#dfebf4");
+        document.documentElement.style.setProperty('--bottomColor', "#c5e9ef");
     }, []);
 
     return (
