@@ -20,7 +20,7 @@ The year is 2025, and you have been selected to help test the brand new product 
 
 ### Design
 
-![Design image](SnailSite.jpg)
+![Design image](./SnailSite.jpg)
 
 Below is a diagram explaining how the main function of the website being the rock paper scissors game will be handled.
 Read diagram from top to bottom.
