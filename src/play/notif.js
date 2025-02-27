@@ -25,7 +25,7 @@ export class NotifHandler {
     receiveLoser(newLoser){
         this.losers.push(newLoser)
         this.trimLoserBoard()
-        this.debugLosers()
+        // this.debugLosers()
         this.handler(this.losers)
     }
 

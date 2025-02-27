@@ -17,7 +17,6 @@ export function Loserboard() {
     }
 
     function generateLoserList() {
-        console.log("I GOT CALLED")
         const compiled = currentLosers.map((loser, index) => (
             <li key={index} className="losingPlayer">{loser} lost to the snail</li>
         ));
