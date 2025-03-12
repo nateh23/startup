@@ -4,9 +4,16 @@ import './login.css';
 import Button from 'react-bootstrap/Button';
 
 export function Authenticated(params){
-    async function signOut() {
-        localStorage.removeItem("userName")
-        params.onLogout()
+    function signOut() {
+        fetch(`/api/auth/logout`, {
+            method: 'delete',
+        })
+        .catch(() => { //PANICCCC
+        })
+        .finally(() => {
+            localStorage.removeItem('userName');
+            params.onLogout();
+        });
     }
 
     return(<>
