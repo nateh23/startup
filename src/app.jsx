@@ -16,9 +16,21 @@ export default function App() {
     const [authState, setAuthState] = React.useState(currentAuthState);
 
     React.useEffect(() => { 
-        //placeholder code for colormind
-        document.documentElement.style.setProperty('--topColor', "#dfebf4");
-        document.documentElement.style.setProperty('--bottomColor', "#c5e9ef");
+        fetch('http://colormind.io/api/', {
+            method: 'POST',
+            body: JSON.stringify({
+            model: 'default'
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            const colors = data.result;
+            document.documentElement.style.setProperty('--topColor', `rgb(${colors[0][0]}, ${colors[0][1]}, ${colors[0][2]})`);
+            document.documentElement.style.setProperty('--bottomColor', `rgb(${colors[1][0]}, ${colors[1][1]}, ${colors[1][2]})`);
+        })
+        .catch(error => {
+            console.error('Error fetching colors from Colormind:', error);
+        });
     }, []);
 
     return (
