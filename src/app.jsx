@@ -16,21 +16,24 @@ export default function App() {
     const [authState, setAuthState] = React.useState(currentAuthState);
 
     React.useEffect(() => { 
-        fetch('http://colormind.io/api/', {
+        fetch('/api/colormind', {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
             body: JSON.stringify({
-            model: 'default'
+                model: 'default', // Example request body for Colormind
+            }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                const colors = data.result;
+                document.documentElement.style.setProperty('--topColor', `rgb(${colors[0][0]}, ${colors[0][1]}, ${colors[0][2]})`);
+                document.documentElement.style.setProperty('--bottomColor', `rgb(${colors[1][0]}, ${colors[1][1]}, ${colors[1][2]})`);
             })
-        })
-        .then(response => response.json())
-        .then(data => {
-            const colors = data.result;
-            document.documentElement.style.setProperty('--topColor', `rgb(${colors[0][0]}, ${colors[0][1]}, ${colors[0][2]})`);
-            document.documentElement.style.setProperty('--bottomColor', `rgb(${colors[1][0]}, ${colors[1][1]}, ${colors[1][2]})`);
-        })
-        .catch(error => {
-            console.error('Error fetching colors from Colormind:', error);
-        });
+            .catch((error) => {
+                console.error('Error fetching colors from Colormind:', error);
+            });
     }, []);
 
     return (

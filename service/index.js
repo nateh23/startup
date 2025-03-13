@@ -21,6 +21,25 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
+
+apiRouter.post('/colormind', async (req, res) => {
+    try {
+        const colormindResponse = await fetch('http://colormind.io/api/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(req.body), // Forward the request body from the frontend
+        });
+
+        const data = await colormindResponse.json();
+        res.json(data); // Send the response back to the frontend
+    } catch (error) {
+        console.error('Error fetching colors from Colormind:', error);
+        res.status(500).json({ error: 'Failed to fetch colors from Colormind' });
+    }
+});
+
 apiRouter.post('/auth/create', async (req, res) => {
     if (await findUser('email', req.body.email)) {
         res.status(409).send({ msg: 'Existing user' });
