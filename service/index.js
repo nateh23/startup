@@ -32,12 +32,6 @@ apiRouter.post('/auth/create', async (req, res) => {
     }
 });
 
-var test = {test:"yeah"};
-apiRouter.get('/test',async (req, res) => {
-    console.log("YEHA");
-    res.send(test);
-})
-
 apiRouter.post('/auth/login', async (req, res) => {
     const user = await findUser('email', req.body.email);
     if (user) {
