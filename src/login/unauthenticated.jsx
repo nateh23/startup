@@ -8,12 +8,12 @@ export function Unauthenticated(params){
     const [password,setPass] = React.useState("");
 
     async function loginUser() {
-        loginOrCreate(`/api/auth/login`);
+        await loginOrCreate(`/api/auth/login`);
         params.onLogin(userName);
     }
 
     async function createUser() {
-        loginOrCreate(`/api/auth/create`);
+        await loginOrCreate(`/api/auth/create`);
         params.onLogin(userName);
     }
 

@@ -22,15 +22,21 @@ var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 apiRouter.post('/auth/create', async (req, res) => {
-if (await findUser('email', req.body.email)) {
-    res.status(409).send({ msg: 'Existing user' });
-} else {
-    const user = await createUser(req.body.email, req.body.password);
+    if (await findUser('email', req.body.email)) {
+        res.status(409).send({ msg: 'Existing user' });
+    } else {
+        const user = await createUser(req.body.email, req.body.password);
 
-    setAuthCookie(res, user.token);
-    res.send({ email: user.email });
-}
+        setAuthCookie(res, user.token);
+        res.send({ email: user.email });
+    }
 });
+
+var test = {test:"yeah"};
+apiRouter.get('/test',async (req, res) => {
+    console.log("YEHA");
+    res.send(test);
+})
 
 apiRouter.post('/auth/login', async (req, res) => {
     const user = await findUser('email', req.body.email);
@@ -79,6 +85,7 @@ app.use(function (err, req, res, next) {
 });
 
 app.use((_req, res) => {
+    console.log("Nop")
     res.sendFile('index.html', { root: 'public' });
 });
 
