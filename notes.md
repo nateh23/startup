@@ -29,3 +29,7 @@ Luckily I messed up a lot so I got a lot of practice in this one, biggest thing 
 
 ## React 2.0
 dude this was a LOT basically dont forget your colormind setup in app.jsx and stuff!
+
+## Service
+next time... pick an api that just naturally uses HTTPS instead of only http... it will make your life so much easier bro
+but hey now i know how proxy servers work idk if theres a downside to them but hey we'll see

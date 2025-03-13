@@ -113,11 +113,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
-- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
-- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
-- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
+- [x] **Node.js/Express HTTP service** - Node js is all setup and express was properly installed.
+- [x] **Static middleware for frontend** - Set it up so there is middleware that serves it up to public view.
+- [x] **Calls to third party endpoints** - Colormind is called to change color scheme of website everytime it's opened.
+- [x] **Backend service endpoints** - Setup all the endpoints needed for keeping score and being able to login to the site.
+- [x] **Frontend calls service endpoints** - Login frontend and score and play frontends interact with the backend properly.
 
 ## 🚀 DB/Login deliverable
 
