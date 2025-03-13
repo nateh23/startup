@@ -31,6 +31,18 @@ export function Play(params) {
         changeWins(getCurrentWins())
     }
 
+    async function saveScore(score) {
+        const newScore = { name: params.userName, score: score};
+    
+        await fetch('/api/score', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(newScore),
+        });
+    
+        // Let other players know the game has concluded(soon)
+    }
+    
     function evalWin(userChoice,snailChoice){
         if (snailChoice == weaknessLib[userChoice]){
             addWin()
@@ -40,6 +52,7 @@ export function Play(params) {
         }else{
             changeSnailDisplay("Snail wrecked you with " + snailChoice)
             notifHandler.receiveLoser(params.userName)
+            saveScore(getCurrentWins())
             resetWins()
         }
     }

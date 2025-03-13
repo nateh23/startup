@@ -6,15 +6,14 @@ import Button from 'react-bootstrap/Button';
 export function Unauthenticated(params){
     const [userName,setUser] = React.useState(params.userName);
     const [password,setPass] = React.useState("");
-
+    const [displayError, setDisplayError] = React.useState(null);
+    
     async function loginUser() {
         await loginOrCreate(`/api/auth/login`);
-        params.onLogin(userName);
     }
 
     async function createUser() {
         await loginOrCreate(`/api/auth/create`);
-        params.onLogin(userName);
     }
 
     async function loginOrCreate(endpoint) {
@@ -47,6 +46,8 @@ export function Unauthenticated(params){
                     <Button variant = "primary" onClick = {() => loginUser()} disabled={!userName || !password}>Sign In</Button>
                     <Button variant = "primary" onClick = {() => createUser()} disabled={!userName || !password}>New Account</Button>
                 </form>
+
+                <>{displayError}</>
         </div>
     </>)
 }
