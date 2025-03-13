@@ -11,7 +11,6 @@ export function Authenticated(params){
         .catch(() => { //PANICCCC
         })
         .finally(() => {
-            localStorage.removeItem('userName');
             params.onLogout();
         });
     }

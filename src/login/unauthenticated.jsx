@@ -25,7 +25,6 @@ export function Unauthenticated(params){
             },
         });
         if (response?.status === 200) {
-            localStorage.setItem('userName', userName);
             params.onLogin(userName);
         } else {
             const body = await response.json();
