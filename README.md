@@ -123,11 +123,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **User registration** - I did not complete this part of the deliverable.
-- [ ] **User login and logout** - I did not complete this part of the deliverable.
-- [ ] **Stores data in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Stores credentials in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Restricts functionality based on authentication** - I did not complete this part of the deliverable.
+- [x] **User registration** - Users can create an account on the website
+- [x] **User login and logout** - Users can sign in with an account created and logout to!
+- [x] **Stores data in MongoDB** - High scores are stored in the database
+- [x] **Stores credentials in MongoDB** - Users creds are stored in MongoDB
+- [x] **Restricts functionality based on authentication** - You can't play against the Snail unless you sign in.
 
 ## 🚀 WebSocket deliverable
 

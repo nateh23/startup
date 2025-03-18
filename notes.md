@@ -33,3 +33,6 @@ dude this was a LOT basically dont forget your colormind setup in app.jsx and st
 ## Service
 next time... pick an api that just naturally uses HTTPS instead of only http... it will make your life so much easier bro
 but hey now i know how proxy servers work idk if theres a downside to them but hey we'll see
+
+## Database
+This was honestly super easy, I guess the biggest thing is write your code to be prepaed to accept database usage later on? Like this would've been a lot harder if I had poorly set it up starting out.
