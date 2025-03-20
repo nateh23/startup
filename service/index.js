@@ -4,7 +4,6 @@ const express = require('express');
 const uuid = require('uuid');
 const app = express();
 const dataBase = require('./database.js');
-const { data } = require('react-router-dom');
 
 const authCookieName = "token";
 

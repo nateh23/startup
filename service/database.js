@@ -7,6 +7,16 @@ const db = client.db('startup');
 const userCollection = db.collection('user');
 const scoreCollection = db.collection('score');
 
+(async function testConnection() {
+    try {
+        await db.command({ ping: 1 });
+        console.log(`Connect to database`);
+    } catch (ex) {
+        console.log(`Unable to connect to database with ${url} because ${ex.message}`);
+        process.exit(1);
+    }
+})();
+
 //invoke funcs
 function getUser(email) {
     return userCollection.findOne({ email: email });
