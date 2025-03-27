@@ -36,3 +36,6 @@ but hey now i know how proxy servers work idk if theres a downside to them but h
 
 ## Database
 This was honestly super easy, I guess the biggest thing is write your code to be prepaed to accept database usage later on? Like this would've been a lot harder if I had poorly set it up starting out.
+
+## Websocket
+This took a little bit longer to conceptually understand but PLEASE remember to setup your debug proxy correctly in the future because that was a terrible thing to be stuck on haha after that it was also important to make a connection on the server AND properly send your data through the websocket correctly

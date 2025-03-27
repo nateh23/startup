@@ -133,8 +133,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Backend listens for WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Frontend makes WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
-- [ ] **Application is fully functional** - I did not complete this part of the deliverable.
+- [x] **Backend listens for WebSocket connection** - The server has a peer proxy thing just like Simons! I stepped through it though and made sure I understood what it was doing.
+- [x] **Frontend makes WebSocket connection** - When playing we make a connection to the websocket so we can see all the losers
+- [x] **Data sent over WebSocket connection** - Whenever the user loses to the snail it sends it to everyone else
+- [x] **WebSocket data displayed** - When the users receive a loser message it appears in the loser box in the top left of the window
+- [x] **Application is fully functional** - Everything for rock paper snail is working!
+
+## Possible Add-Ons
+- [] **Make more visual feedback for play session**
+- [] **Avoid darker colors for the website so top bar is visible**
