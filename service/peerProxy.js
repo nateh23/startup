@@ -3,10 +3,11 @@ const { WebSocketServer } = require('ws');
 function peerProxy(httpServer) {
   // Create a websocket object
   const socketServer = new WebSocketServer({ server: httpServer });
+  console.log("created websocket")
 
   socketServer.on('connection', (socket) => {
     socket.isAlive = true;
-
+    console.log("connection made to socket")
     // Forward messages to everyone except the sender
     socket.on('message', function message(data) {
       socketServer.clients.forEach((client) => {
