@@ -51,7 +51,7 @@ export function Play(params) {
             changeSnailDisplay("You both used " + snailChoice + " and got confused")
         }else{
             changeSnailDisplay("Snail wrecked you with " + snailChoice)
-            notifHandler.receiveLoser(params.userName)
+            notifHandler.broadcastLoser(params.userName) //the debug currently is just making you appear on here
             saveScore(getCurrentWins())
             resetWins()
         }

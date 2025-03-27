@@ -1,26 +1,41 @@
-class EventMessage {
-    constructor(loser){
-        this.loser = loser
-    }
-}
-
 const BOARD_LENGTH = 5
 //i see in simon its built to have multiple handlers but..... why?
 class NotifHandler {
     constructor() {
+        console.log("START")
+        let port = window.location.port;
+        const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+        this.socket = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
+        console.log(this.socket)
         this.losers = [];
-        this.listeners = [];
-        let counter = 0
-        setInterval(() => {
-            counter += 1
-            this.receiveLoser("John" + counter)
-        }, 500);
+
+        this.socket.onopen = () => {
+            console.log("connected to socket")
+        };
+        
+        this.socket.onmessage = async (loser) => {
+            try {
+                const event = JSON.parse(await loser.text());
+                this.receiveLoser(event);
+            } catch {}
+        };
+        
+        //debug
+        // let counter = 0
+        // setInterval(() => { //the debug loop for fake users
+        //     counter += 1
+        //     this.receiveLoser("John" + counter)
+        // }, 500);
     }
 
     startWithHandlerFunc(handlerFunc){
         this.handler = handlerFunc
     }
 
+    broadcastLoser(newLoser) {
+        this.socket.send(JSON.stringify(newLoser));
+    }
+    
     receiveLoser(newLoser){
         if (this.handler){
             this.losers.push(newLoser)
