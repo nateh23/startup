@@ -3,7 +3,7 @@ const { WebSocketServer } = require('ws');
 function peerProxy(httpServer) {
   // Create a websocket object
   const socketServer = new WebSocketServer({ server: httpServer });
-  console.log(`websocketmade on port ${httpServer}`)
+  // console.log(`websocketmade on port ${httpServer}`)
 
   socketServer.on('connection', (socket) => {
     socket.isAlive = true;
