@@ -1,5 +1,12 @@
 const BOARD_LENGTH = 5
 //i see in simon its built to have multiple handlers but..... why?
+
+class EventMessage {
+    constructor(loser) {
+        this.loser = loser;
+    }
+}
+
 class NotifHandler {
     constructor() {
         let port = window.location.port;
@@ -11,23 +18,16 @@ class NotifHandler {
             console.log("connected to socket")
         };
         
-        this.socket.onmessage = async (loser) => {
+        this.socket.onmessage = async (loserMsg) => {
             console.log("receiving message")
             try {
-                const event = JSON.parse(await loser.text());
-                console.log("event")
-                this.receiveLoser(event);
+                const event = JSON.parse(await loserMsg.data.text());
+                console.log(event.loser)
+                this.receiveLoser(event.loser);
             } catch {
                 console.log("receiving failed : (")
             }
         };
-        
-        //debug
-        // let counter = 0
-        // setInterval(() => { //the debug loop for fake users
-        //     counter += 1
-        //     this.receiveLoser("John" + counter)
-        // }, 500);
     }
 
     startWithHandlerFunc(handlerFunc){
@@ -35,7 +35,8 @@ class NotifHandler {
     }
 
     broadcastLoser(newLoser) {
-        this.socket.send(JSON.stringify(newLoser));
+        const loserEvent = new EventMessage(newLoser);
+        this.socket.send(JSON.stringify(loserEvent));
     }
     
     receiveLoser(newLoser){
