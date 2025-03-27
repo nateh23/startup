@@ -6,6 +6,7 @@ class NotifHandler {
         let port = window.location.port;
         const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
         this.socket = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
+        console.log(`connecting to ${port}`)
         console.log(this.socket)
         this.losers = [];
 
